@@ -1,5 +1,4 @@
 @Library('jenkins-SL') 
-def gv
 pipeline {
     agent { docker 'node:14' }
     stages {
