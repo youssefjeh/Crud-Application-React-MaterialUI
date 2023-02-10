@@ -4,9 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building application...'
-                    dir('src'){
                         sh 'npm install'
-                }
             }
         }
         stage('Test') {
