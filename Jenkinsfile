@@ -20,7 +20,7 @@ pipeline {
                 echo 'pushing to  DockerHuB ...'
                 withCredentials([usernamePassword(credentialsId:'dockerhub-rep', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
                     sh 'docker tag youssefjeh/Crud-Application-React-MaterialUI:v6.0 dockerysfCrud-Application-React-MaterialUI:v6.0'
-                    sh "echo $PASS | docker login -u $USER --password-stdi
+                    sh "echo $PASS | docker login -u $USER --password-stdi"
                     sh 'docker push dockerysf/Crud-Application-React-MaterialUI:v6.0'
                 }
                   
